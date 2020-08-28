@@ -1,7 +1,10 @@
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 0,
-    items: 1
+    items: 1,
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true
 })
 $('#nav').click(function () {
     $('.navigation').slideToggle()

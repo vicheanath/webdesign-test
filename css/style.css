@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  height: 700vh;
+}
+
 header {
   min-height: 60px;
   position: fixed;
@@ -191,7 +195,7 @@ header #nav {
 #contain #slide #search {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 30%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 5;
@@ -222,23 +226,55 @@ header #nav {
 }
 
 #contain #slide #search form {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
-  padding: 15px;
+  padding: 0 15px;
   background: #333;
 }
 
+@media (max-width: 768px) {
+  #contain #slide #search form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #contain #slide #search form {
+    width: 70vw;
+  }
+}
+
 #contain #slide #search form input {
-  padding: 7px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  color: #fff;
+  padding: 7px 15px;
   outline: none;
   border: transparent;
   background: #424242;
 }
 
+@media (max-width: 768px) {
+  #contain #slide #search form input {
+    margin: 10px 0px;
+  }
+}
+
 #contain #slide #search form button {
-  margin: 5px;
+  border-radius: 5px;
+  margin: 10px 0 10px 5px;
+  padding: 10px 15px;
   outline: none;
   border: transparent;
   background: #34ba97;
+  color: #fff;
 }
 
 #promotion {
@@ -400,17 +436,17 @@ header #nav {
   color: #fff;
 }
 
-.s-title #summer {
+#summer {
   overflow: hidden;
 }
 
-.s-title #summer .summer-image {
+#summer .summer-image {
   margin-top: 10px;
   width: 100%;
   height: 350px;
   background-repeat: no-repeat !important;
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
 }
 
 #our-destination .o-title h1 {
@@ -433,7 +469,15 @@ header #nav {
   overflow: hidden;
   height: 300px;
   width: 100%;
-  height: auto;
+}
+
+@media (max-width: 768px) {
+  #our-destination .img-box {
+    height: 250px;
+  }
+}
+
+#our-destination .img-box img {
   width: 100%;
 }
 
@@ -446,6 +490,66 @@ header #nav {
           transform: translate(-50%);
   position: absolute;
   text-align: center;
+}
+
+#day {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+#day .day-image {
+  width: 100%;
+  height: 220px;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+@media (max-width: 768px) {
+  #day .day-image {
+    height: 190px;
+  }
+}
+
+#day .wrapp-d {
+  color: #fff;
+}
+
+#day .wrapp-d .w-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  #day .wrapp-d .w-day .d-item {
+    text-align: center;
+  }
+  #day .wrapp-d .w-day .d-item p {
+    font-size: 20px !important;
+  }
+  #day .wrapp-d .w-day .d-item span {
+    padding: 3px 7px;
+    font-size: 9px;
+  }
+}
+
+#day .wrapp-d .w-day .d-item {
+  white-space: nowrap;
+  text-align: center;
+}
+
+#day .wrapp-d .w-day .d-item p {
+  font-size: 40px;
+  text-shadow: 0px 5px 5px 1px #00000048;
+}
+
+#day .wrapp-d .w-day .d-item span {
+  padding: 5px 10px;
 }
 
 #back-to-top {
