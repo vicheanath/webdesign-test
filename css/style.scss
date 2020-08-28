@@ -10,15 +10,13 @@ $blue: #34ba97;
 $black: #333;
 $white: #fff;
 $gray: #ccc;
-$secondary:#434a54;
+$secondary: #434a54;
 // defule
 * {
   margin: 0;
   padding: 0;
 }
-body{
-  height: 400vh;
-}
+
 header {
   min-height: 60px;
   position: fixed;
@@ -43,6 +41,8 @@ header {
     margin: 0;
     padding: 0;
     .navigation {
+      margin: 0 !important;
+      justify-content: flex-end;
       @media (max-width: $tablet) {
         display: none;
         position: absolute;
@@ -80,13 +80,16 @@ header {
               padding: 10px 0;
             }
             list-style: none;
-            margin: 0 40px;
+            margin: 0 20px;
             a {
               font-size: 0.875rem;
               padding: 12px 0;
               text-decoration: none;
               font-weight: 600;
               color: $blue;
+              &:hover {
+                color: $black;
+              }
             }
           }
         }
@@ -228,22 +231,22 @@ header {
         display: flex;
         flex-direction: row;
         p {
-          margin:0;
+          margin: 0;
           width: 50%;
           padding: 10px 15px;
         }
       }
     }
-    &:hover{
+    &:hover {
       box-shadow: 0px 5px 5px 1px #00000048;
     }
-    .detail{
+    .detail {
       cursor: pointer;
-      padding:15px;
-      button{
-        border:transparent;
-        outline:none;
-        padding: 5px 10px ;
+      padding: 15px;
+      button {
+        border: transparent;
+        outline: none;
+        padding: 5px 10px;
       }
     }
     .w-img {
@@ -262,26 +265,161 @@ header {
       }
     }
   }
-  .w-button-pro{
+  .w-button-pro {
     display: flex;
     justify-content: center;
-    button{
-      border:transparent;
-      outline:none;
-      padding: 5px 10px ;
-      background:$secondary;
+    button {
+      border: transparent;
+      outline: none;
+      padding: 5px 10px;
+      background: $secondary;
       margin: 10px;
-      color:$white;
+      color: $white;
     }
   }
 }
-#summer-image{
-  margin-top:10px;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-  img{
+// title
+.s-title {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $white;
+    padding: 15px 0;
+    margin: 0;
+  }
+  span {
+    width: 30px;
+    height: 5px;
+    background: $white;
+    display: inline-block;
+    border-radius: 2.5px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    color: $white;
+    text-shadow: 0px 5px 5px 1px #00000048;
+    font-size: 20px;
+  }
+  button {
+    border: transparent;
+    outline: none;
+    padding: 5px 10px;
+    background: $secondary;
+    margin: 10px;
+    color: $white;
+  }
+  #summer {
+    overflow: hidden;
+    .summer-image {
+      margin-top: 10px;
+      width: 100%;
+      height: 350px;
+      background-repeat: no-repeat !important;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+// our destions
+#our-destination {
+  .o-title {
+    h1 {
+      color: $black;
+      margin-top: 20px;
+    }
+    p {
+      color: $black;
+      margin: 0 !important;
+    }
+  }
+  .item {
+    margin-top: 20px;
+  }
+  .img-box {
+    cursor: zoom-in;
+    overflow: hidden;
+    height: 300px;
     width: 100%;
     height: auto;
+    width: 100%;
+  }
+  .location {
+    background: $white;
+    padding: 5px 10px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    text-align: center;
+  }
+}
+// backtop top
+#back-to-top {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+// popup
+#popup {
+  display: none;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  .delet {
+    cursor: pointer;
+    line-height: 15px;
+    position: absolute;
+    background: $blue;
+    color: $white;
+    padding: 15px;
+    border-radius: 50%;
+    top: 20px;
+    right: 20px;
+    &:hover {
+      background: $white;
+      color: $blue;
+    }
+  }
+  button {
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    line-height: 15px;
+    position: absolute;
+    background: $blue;
+    color: $white;
+    padding: 15px;
+    border-radius: 4px;
+    bottom: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+      background: $white;
+      color: $blue;
+    }
+  }
+  .image-dailog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
