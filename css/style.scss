@@ -511,7 +511,7 @@ header {
         }
         cursor: pointer;
         transition: 0.3s linear;
-        padding:0 50px;
+        padding:30px 50px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -555,6 +555,7 @@ header {
     display: flex;
     justify-content: space-between;
     i {
+      transition: 0.3s linear;
       cursor: pointer;
       font-size: 18px;
       &:hover {
@@ -616,7 +617,7 @@ header {
       color: $blue;
     }
   }
-  button {
+  a {
     border: transparent;
     outline: none;
     cursor: pointer;

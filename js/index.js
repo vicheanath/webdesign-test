@@ -35,19 +35,13 @@ $('#back-to-top').click(function () {
 $('.img-box').click(function () {
     $('#popup').css({ 'display': 'block' })
     var img = $(this).find('img').attr("src");
-    $('body').find('#img-box').attr('data-img',img).css({'background-image': 'url('+img+')'})
+    $('body').find('#img-box').attr('data-img', img).css({ 'background-image': 'url(' + img + ')' })
+   
+    $('#popup').find('a').attr('href',img)
+
 })
 $('.delet').click(function () {
     $('body').find('#popup').css({ 'display': 'none' })
-})
-$('#btn-donwload').click(function () {
-    var imagePath = $('body').find('#img-box').data('img')
-    let arrName = imagePath.split('/');
-    let fileName = arrName[arrName.length -1]
-
-    console.log(fileName)
-    saveAs(imagePath, fileName);
-
 })
 
 

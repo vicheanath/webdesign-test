@@ -663,7 +663,7 @@ header #nav {
   cursor: pointer;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
-  padding: 0 50px;
+  padding: 30px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -731,6 +731,8 @@ header #nav {
 }
 
 #footer .i-socail i {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
   cursor: pointer;
   font-size: 18px;
 }
@@ -806,7 +808,7 @@ header #nav {
   color: #34ba97;
 }
 
-#popup button {
+#popup a {
   border: transparent;
   outline: none;
   cursor: pointer;
@@ -822,7 +824,7 @@ header #nav {
           transform: translate(-50%, -50%);
 }
 
-#popup button:hover {
+#popup a:hover {
   background: #fff;
   color: #34ba97;
 }
