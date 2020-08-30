@@ -791,6 +791,26 @@ header #nav {
   background: rgba(0, 0, 0, 0.5);
 }
 
+#popup a {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 15px;
+  position: absolute;
+  background: #34ba97;
+  color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#popup a:hover {
+  background: #fff;
+  color: #34ba97;
+}
+
 #popup .delet {
   cursor: pointer;
   line-height: 15px;
@@ -804,27 +824,6 @@ header #nav {
 }
 
 #popup .delet:hover {
-  background: #fff;
-  color: #34ba97;
-}
-
-#popup a {
-  border: transparent;
-  outline: none;
-  cursor: pointer;
-  line-height: 15px;
-  position: absolute;
-  background: #34ba97;
-  color: #fff;
-  padding: 15px;
-  border-radius: 4px;
-  bottom: 6%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#popup a:hover {
   background: #fff;
   color: #34ba97;
 }

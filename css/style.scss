@@ -594,6 +594,23 @@ header {
 }
 // popup
 #popup {
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 15px;
+    position: absolute;
+    background: $blue;
+    color: $white;
+    padding: 15px;
+    border-radius: 4px;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+      background: $white;
+      color: $blue;
+    }
+  }
   display: none;
   z-index: 50;
   top: 0;
@@ -616,25 +633,10 @@ header {
       background: $white;
       color: $blue;
     }
+    
+    
   }
-  a {
-    border: transparent;
-    outline: none;
-    cursor: pointer;
-    line-height: 15px;
-    position: absolute;
-    background: $blue;
-    color: $white;
-    padding: 15px;
-    border-radius: 4px;
-    bottom: 6%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    &:hover {
-      background: $white;
-      color: $blue;
-    }
-  }
+  
   .image-dailog {
     position: absolute;
     top: 50%;
