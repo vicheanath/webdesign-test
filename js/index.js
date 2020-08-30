@@ -36,12 +36,27 @@ $('.img-box').click(function () {
     $('#popup').css({ 'display': 'block' })
     var img = $(this).find('img').attr("src");
     $('body').find('#img-box').attr('data-img', img).css({ 'background-image': 'url(' + img + ')' })
-   
-    $('#popup').find('a').attr('href',img)
+
+    $('#popup').find('a').attr('href', img)
 
 })
 $('.delet').click(function () {
     $('body').find('#popup').css({ 'display': 'none' })
 })
 
+$('#btn-send').click(function () {
+    $('#frm-send').submit(function (e) {
+        e.preventDefault();
+    })
+    var inputdata = $('#frm-send')[0].children
+    var data = []
+    for (let i = 0; i < inputdata.length - 1; i++) {
+        var val = inputdata[i].value
+        var key = inputdata[i].name
+        var f = key +':'+ val
+        data.push(f)
+    }
+    console.log(data)
+    alert(data)
+})
 
